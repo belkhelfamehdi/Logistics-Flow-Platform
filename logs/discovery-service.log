@@ -95,3 +95,5 @@ Standard Commons Logging discovery in action with spring-jcl: please remove comm
 2026-04-17T18:17:23.947+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2026-04-17T18:18:23.947+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2026-04-17T18:19:23.948+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:20:23.948+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:21:23.948+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
