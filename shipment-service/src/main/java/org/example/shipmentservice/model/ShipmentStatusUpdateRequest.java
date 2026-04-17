@@ -1,4 +1,4 @@
-package org.example.shipmentservice.model;
+package main.java.org.example.shipmentservice.model;
 
 import jakarta.validation.constraints.NotBlank;
 

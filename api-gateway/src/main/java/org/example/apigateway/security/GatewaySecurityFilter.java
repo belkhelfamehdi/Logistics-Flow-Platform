@@ -1,4 +1,4 @@
-package org.example.apigateway.security;
+package main.java.org.example.apigateway.security;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

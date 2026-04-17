@@ -1,4 +1,4 @@
-package org.example.authservice;
+package main.java.org.example.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
