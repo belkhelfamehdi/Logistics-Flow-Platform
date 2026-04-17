@@ -460,3 +460,6 @@
 2026-04-17T18:15:35.568+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.e.s.service.ShipmentEventProcessor     : Created shipment id=1 for orderId=1, status=PREPARING
 2026-04-17T18:15:35.568+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.e.s.service.ShipmentEventProcessor     : Created shipment id=2 for orderId=2, status=PREPARING
 2026-04-17T18:18:28.099+02:00  INFO 23535 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:28.100+02:00  INFO 23535 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:50.112+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:28:28.101+02:00  INFO 23535 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

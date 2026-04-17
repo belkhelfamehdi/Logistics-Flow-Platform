@@ -348,3 +348,6 @@
 2026-04-17T18:14:50.898+02:00  INFO 23577 --- [order-service] [nio-8081-exec-2] o.e.o.service.OrderEventPublisher        : Published ORDER_CREATED event for orderId=1
 2026-04-17T18:14:56.009+02:00  INFO 23577 --- [order-service] [nio-8081-exec-3] o.e.o.service.OrderEventPublisher        : Published ORDER_CREATED event for orderId=2
 2026-04-17T18:18:28.074+02:00  INFO 23577 --- [order-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:28.075+02:00  INFO 23577 --- [order-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:51.106+02:00  INFO 23577 --- [order-service] [vice-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=order-service-producer-1] Node -1 disconnected.
+2026-04-17T18:28:28.076+02:00  INFO 23577 --- [order-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

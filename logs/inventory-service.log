@@ -563,3 +563,7 @@
 2026-04-17T18:15:35.558+02:00  INFO 23534 --- [inventory-service] [ntainer#0-0-C-1] o.e.i.service.InventoryEventProcessor    : Processed ORDER_CREATED for orderId=1, status=RESERVED
 2026-04-17T18:15:35.559+02:00  INFO 23534 --- [inventory-service] [ntainer#0-0-C-1] o.e.i.service.InventoryEventProcessor    : Processed ORDER_CREATED for orderId=2, status=RESERVED
 2026-04-17T18:18:28.082+02:00  INFO 23534 --- [inventory-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:28.083+02:00  INFO 23534 --- [inventory-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:50.112+02:00  INFO 23534 --- [inventory-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-inventory-group-1, groupId=inventory-group] Node -1 disconnected.
+2026-04-17T18:24:35.769+02:00  INFO 23534 --- [inventory-service] [vice-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=inventory-service-producer-1] Node -1 disconnected.
+2026-04-17T18:28:28.084+02:00  INFO 23534 --- [inventory-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

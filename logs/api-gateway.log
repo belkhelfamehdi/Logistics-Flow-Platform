@@ -76,3 +76,5 @@
 2026-04-17T18:13:32.434+02:00  INFO 23943 --- [api-gateway] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
 2026-04-17T18:13:32.444+02:00  INFO 23943 --- [api-gateway] [           main] o.e.apigateway.ApiGatewayApplication     : Started ApiGatewayApplication in 1.35 seconds (process running for 1.57)
 2026-04-17T18:18:32.206+02:00  INFO 23943 --- [api-gateway] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:23:32.207+02:00  INFO 23943 --- [api-gateway] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:28:32.208+02:00  INFO 23943 --- [api-gateway] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
