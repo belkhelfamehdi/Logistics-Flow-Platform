@@ -61,6 +61,9 @@ wait_http "config-server" "http://localhost:8880"
 start_service "discovery-service" "discovery-service"
 wait_http "discovery-service" "http://localhost:8761"
 
+start_service "auth-service" "auth-service"
+wait_http "auth-service" "http://localhost:8084/auth/csrf"
+
 start_service "order-service" "order-service"
 start_service "inventory-service" "inventory-service"
 start_service "shipment-service" "shipment-service"

@@ -6,6 +6,8 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin, RETAIN_FIRST
       globalcors:
         add-to-simple-url-handler-mapping: true
         cors-configurations:
@@ -25,6 +27,14 @@ spring:
             allowCredentials: true
             maxAge: 3600
       routes:
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+        - id: platform-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/platform/**
         - id: order-service
           uri: lb://order-service
           predicates:

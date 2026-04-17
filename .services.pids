@@ -1,6 +1,7 @@
-config-server:22506
-discovery-service:22787
-order-service:23089
-inventory-service:23090
-shipment-service:23091
-api-gateway:23793
+config-server:93783
+discovery-service:93805
+auth-service:94276
+order-service:94574
+inventory-service:94575
+shipment-service:94576
+api-gateway:95268

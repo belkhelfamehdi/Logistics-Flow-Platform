@@ -1,0 +1,192 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.example:shipment-service >--------------------
+[INFO] Building shipment-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.0:run (default-cli) > test-compile @ shipment-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shipment-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ shipment-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shipment-service ---
+[INFO] skip non existing resourceDirectory /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ shipment-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.0:run (default-cli) < test-compile @ shipment-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.0:run (default-cli) @ shipment-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2026-04-17T19:13:59.839+02:00  INFO 95119 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : Starting ShipmentServiceApplication using Java 17.0.18 with PID 95119 (/home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service/target/classes started by mehdibelkhelfa in /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service)
+2026-04-17T19:13:59.841+02:00  INFO 95119 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T19:14:00.276+02:00  INFO 95119 --- [shipment-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=560a5c26-270f-31ea-8b4f-fc79d6c9e5f1
+2026-04-17T19:14:00.414+02:00  INFO 95119 --- [shipment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-04-17T19:14:00.420+02:00  INFO 95119 --- [shipment-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T19:14:00.420+02:00  INFO 95119 --- [shipment-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2026-04-17T19:14:00.443+02:00  INFO 95119 --- [shipment-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T19:14:00.444+02:00  INFO 95119 --- [shipment-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 579 ms
+2026-04-17T19:14:00.791+02:00  INFO 95119 --- [shipment-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-04-17T19:14:00.814+02:00  WARN 95119 --- [shipment-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17T19:14:00.839+02:00  INFO 95119 --- [shipment-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-17T19:14:00.855+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-17T19:14:00.857+02:00  INFO 95119 --- [shipment-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T19:14:00.861+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-17T19:14:00.861+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-17T19:14:00.861+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-17T19:14:00.861+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-17T19:14:00.862+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-17T19:14:00.862+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-17T19:14:00.862+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-17T19:14:01.030+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-17T19:14:01.031+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-17T19:14:01.032+02:00  INFO 95119 --- [shipment-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-17T19:14:01.032+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1776446041032 with initial instances count: 1
+2026-04-17T19:14:01.034+02:00  INFO 95119 --- [shipment-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHIPMENT-SERVICE with eureka with status UP
+2026-04-17T19:14:01.034+02:00  INFO 95119 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1776446041034, current=UP, previous=STARTING]
+2026-04-17T19:14:01.035+02:00  INFO 95119 --- [shipment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHIPMENT-SERVICE/shipment-service:8083: registering service...
+2026-04-17T19:14:01.041+02:00  INFO 95119 --- [shipment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-04-17T19:14:01.041+02:00  INFO 95119 --- [shipment-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-04-17T19:14:01.053+02:00  INFO 95119 --- [shipment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHIPMENT-SERVICE/shipment-service:8083 - registration status: 204
+2026-04-17T19:14:01.060+02:00  INFO 95119 --- [shipment-service] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipment-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipment-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-04-17T19:14:01.079+02:00  INFO 95119 --- [shipment-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-04-17T19:14:01.131+02:00  INFO 95119 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2026-04-17T19:14:01.132+02:00  INFO 95119 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2026-04-17T19:14:01.132+02:00  INFO 95119 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1776446041131
+2026-04-17T19:14:01.133+02:00  INFO 95119 --- [shipment-service] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Subscribed to topic(s): logistics-events
+2026-04-17T19:14:01.145+02:00  INFO 95119 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : Started ShipmentServiceApplication in 1.541 seconds (process running for 1.794)
+2026-04-17T19:14:01.286+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cluster ID: slGXEesyQ5yFvtcghmCkbg
+2026-04-17T19:14:02.806+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-04-17T19:14:02.808+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] (Re-)joining group
+2026-04-17T19:14:02.825+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Request joining group due to: need to re-join with the given member-id: consumer-shipment-group-1-d167cd59-c877-4552-a6b7-131988e15344
+2026-04-17T19:14:02.826+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] (Re-)joining group
+2026-04-17T19:14:05.842+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-shipment-group-1-d167cd59-c877-4552-a6b7-131988e15344', protocol='range'}
+2026-04-17T19:14:05.846+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Finished assignment for group at generation 1: {consumer-shipment-group-1-d167cd59-c877-4552-a6b7-131988e15344=Assignment(partitions=[logistics-events-0])}
+2026-04-17T19:14:05.878+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-shipment-group-1-d167cd59-c877-4552-a6b7-131988e15344', protocol='range'}
+2026-04-17T19:14:05.878+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Notifying assignor about the new Assignment(partitions=[logistics-events-0])
+2026-04-17T19:14:05.879+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Adding newly assigned partitions: logistics-events-0
+2026-04-17T19:14:05.888+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Found no committed offset for partition logistics-events-0
+2026-04-17T19:14:05.897+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Resetting offset for partition logistics-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2026-04-17T19:14:05.897+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipment-group: partitions assigned: [logistics-events-0]
+2026-04-17T19:16:12.864+02:00  INFO 95119 --- [shipment-service] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-17T19:16:12.864+02:00  INFO 95119 --- [shipment-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-17T19:16:12.865+02:00  INFO 95119 --- [shipment-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-17T19:19:00.863+02:00  INFO 95119 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T19:23:00.175+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] o.e.s.service.ShipmentEventProcessor     : Created shipment id=1 for orderId=1, status=PREPARING
+2026-04-17T19:23:01.680+02:00  INFO 95119 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T19:24:00.863+02:00  INFO 95119 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

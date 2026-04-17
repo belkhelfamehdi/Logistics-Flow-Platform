@@ -17,6 +17,58 @@ Le but est de montrer un workflow metier event-driven simple:
 
 Le projet privilegie la clarte pedagogique: stockage en memoire, JSON simple sur Kafka, APIs lisibles.
 
+## 1.1) Vision metier (Business Logic)
+
+Logistics Flow Platform est une plateforme de suivi logistique qui transforme une commande client en livraison preparee, avec controle automatique du stock.
+
+### Objectif metier
+
+- Reduire les retards de preparation
+- Eviter les commandes validees sans stock disponible
+- Donner une visibilite claire sur l'etat des commandes
+
+### Probleme adresse
+
+Dans une chaine logistique, les equipes perdent du temps quand:
+
+- La commande est validee sans verifier le stock
+- Les informations sont dispersees entre plusieurs outils
+- Les blocages sont detectes trop tard
+
+La plateforme centralise ces etapes pour accelerer le traitement.
+
+### Logique metier de bout en bout
+
+1. Creation de commande
+  Le service enregistre la commande du client (produit, quantite, client).
+2. Verification du stock
+  Le systeme verifie automatiquement si la quantite demandee est disponible.
+3. Decision de reservation
+  Si le stock est suffisant, la commande est confirmee; sinon, elle est refusee ou mise en attente.
+4. Preparation de la livraison
+  Les commandes confirmees passent en preparation de livraison.
+
+### Regles metier principales
+
+- Une commande doit contenir un produit valide, une quantite positive et un client
+- Le stock ne peut jamais devenir negatif
+- Une livraison ne peut etre preparee que si la reservation est validee
+- Chaque etape produit un statut clair pour le suivi operationnel
+
+### Valeur pour les equipes
+
+- Service client: reponse rapide sur la faisabilite d'une commande
+- Operations: moins de taches manuelles et moins d'erreurs
+- Management: vue en temps reel sur les flux et les blocages
+
+### Indicateurs metier a suivre
+
+- Nombre de commandes recues
+- Taux de commandes confirmees
+- Taux de commandes refusees pour manque de stock
+- Nombre de livraisons en preparation
+- Nombre de commandes en attente
+
 ## 2) Architecture globale
 
 ### Services et roles
