@@ -1,0 +1,462 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.example:shipment-service >--------------------
+[INFO] Building shipment-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.0:run (default-cli) > test-compile @ shipment-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ shipment-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ shipment-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ shipment-service ---
+[INFO] skip non existing resourceDirectory /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ shipment-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.0:run (default-cli) < test-compile @ shipment-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.0:run (default-cli) @ shipment-service ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2026-04-17T18:13:26.966+02:00  INFO 23535 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : Starting ShipmentServiceApplication using Java 17.0.18 with PID 23535 (/home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service/target/classes started by mehdibelkhelfa in /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/shipment-service)
+2026-04-17T18:13:26.968+02:00  INFO 23535 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T18:13:27.446+02:00  INFO 23535 --- [shipment-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3bbb9c1e-a556-3357-b8bb-4a1facf5d13e
+2026-04-17T18:13:27.601+02:00  INFO 23535 --- [shipment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-04-17T18:13:27.610+02:00  INFO 23535 --- [shipment-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T18:13:27.610+02:00  INFO 23535 --- [shipment-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2026-04-17T18:13:27.645+02:00  INFO 23535 --- [shipment-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T18:13:27.646+02:00  INFO 23535 --- [shipment-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 649 ms
+2026-04-17T18:13:28.034+02:00  INFO 23535 --- [shipment-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-04-17T18:13:28.057+02:00  WARN 23535 --- [shipment-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17T18:13:28.083+02:00  INFO 23535 --- [shipment-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-17T18:13:28.092+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-17T18:13:28.094+02:00  INFO 23535 --- [shipment-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-17T18:13:28.098+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-17T18:13:28.357+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-17T18:13:28.358+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-17T18:13:28.358+02:00  INFO 23535 --- [shipment-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-17T18:13:28.359+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1776442408359 with initial instances count: 0
+2026-04-17T18:13:28.361+02:00  INFO 23535 --- [shipment-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SHIPMENT-SERVICE with eureka with status UP
+2026-04-17T18:13:28.361+02:00  INFO 23535 --- [shipment-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1776442408361, current=UP, previous=STARTING]
+2026-04-17T18:13:28.362+02:00  INFO 23535 --- [shipment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHIPMENT-SERVICE/shipment-service:8083: registering service...
+2026-04-17T18:13:28.372+02:00  INFO 23535 --- [shipment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path '/'
+2026-04-17T18:13:28.373+02:00  INFO 23535 --- [shipment-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-04-17T18:13:28.403+02:00  INFO 23535 --- [shipment-service] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-shipment-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = shipment-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2026-04-17T18:13:28.438+02:00  INFO 23535 --- [shipment-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SHIPMENT-SERVICE/shipment-service:8083 - registration status: 204
+2026-04-17T18:13:28.450+02:00  INFO 23535 --- [shipment-service] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-04-17T18:13:28.530+02:00  INFO 23535 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.8.1
+2026-04-17T18:13:28.531+02:00  INFO 23535 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 70d6ff42debf7e17
+2026-04-17T18:13:28.531+02:00  INFO 23535 --- [shipment-service] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1776442408530
+2026-04-17T18:13:28.532+02:00  INFO 23535 --- [shipment-service] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Subscribed to topic(s): logistics-events
+2026-04-17T18:13:28.543+02:00  INFO 23535 --- [shipment-service] [           main] o.e.s.ShipmentServiceApplication         : Started ShipmentServiceApplication in 1.878 seconds (process running for 2.22)
+2026-04-17T18:13:28.633+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:28.633+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:28.633+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:28.721+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:28.721+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:28.721+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:28.823+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:28.823+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:28.823+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:29.021+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:29.021+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:29.021+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:29.374+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:29.375+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:29.375+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:30.080+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:30.080+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:30.080+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:30.936+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:30.936+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:30.936+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:31.943+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:31.943+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:31.943+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:32.944+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:32.944+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:32.944+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:33.985+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:33.986+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:33.986+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:34.992+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:34.992+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:34.992+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:35.948+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:35.948+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:35.948+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:36.904+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:36.904+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:36.904+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:37.905+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:37.905+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:37.905+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:38.832+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:38.833+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:38.833+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:39.823+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:39.823+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:39.823+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:40.810+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:40.810+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:40.810+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:41.765+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:41.765+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:41.765+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:42.815+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:42.815+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:42.815+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:43.836+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:43.836+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:43.837+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:44.691+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:44.691+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:44.692+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:45.596+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:45.596+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:45.596+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:46.597+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:46.597+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:46.597+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:47.602+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:47.602+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:47.602+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:48.456+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:48.456+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:48.456+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:49.475+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:49.475+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:49.475+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:50.479+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:50.480+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:50.480+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:51.384+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:51.384+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:51.384+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:52.065+02:00  INFO 23535 --- [shipment-service] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-17T18:13:52.066+02:00  INFO 23535 --- [shipment-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-17T18:13:52.066+02:00  INFO 23535 --- [shipment-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-17T18:13:52.433+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:52.433+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:52.433+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:53.441+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:53.441+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:53.441+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:54.413+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:54.414+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:54.414+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:55.344+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:55.344+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:55.344+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:56.345+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:56.345+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:56.345+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:57.249+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:57.249+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:57.249+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:58.250+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:58.250+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:58.250+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:13:58.358+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-17T18:13:58.358+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-17T18:13:58.358+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-17T18:13:58.359+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-17T18:13:58.359+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-17T18:13:58.359+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-04-17T18:13:58.359+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-17T18:13:58.371+02:00  INFO 23535 --- [shipment-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-17T18:13:59.256+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:13:59.256+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:13:59.256+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:00.257+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:00.257+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:00.257+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:01.278+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:01.278+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:01.278+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:02.304+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:02.304+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:02.304+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:03.305+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:03.305+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:03.305+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:04.306+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:04.307+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:04.307+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:05.307+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:05.307+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:05.307+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:06.308+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:06.308+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:06.308+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:07.312+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:07.312+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:07.312+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:08.266+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:08.266+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:08.266+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:09.104+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:09.104+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:09.104+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:10.108+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:10.108+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:10.108+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:11.109+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:11.109+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:11.109+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:12.013+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:12.013+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:12.013+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:13.063+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:13.063+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:13.063+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:13.902+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:13.902+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:13.902+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:14.906+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:14.907+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:14.907+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:15.760+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:15.761+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:15.761+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:16.765+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:16.765+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:16.765+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:17.766+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:17.766+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:17.766+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:18.767+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:18.767+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:18.768+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:19.772+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:19.772+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:19.772+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:20.626+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:20.626+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:20.626+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:21.676+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:21.676+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:21.676+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:22.680+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:22.681+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:22.681+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:23.695+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:23.695+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:23.695+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:24.695+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:24.696+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:24.696+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:25.678+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:25.678+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:25.678+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:26.679+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:26.679+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:26.679+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:27.679+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:27.679+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:27.679+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:28.680+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:28.680+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:28.680+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:29.681+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:29.681+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:29.681+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:30.534+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:30.534+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:30.534+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:31.535+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:31.535+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:31.535+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:32.536+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:32.537+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:32.537+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:33.541+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:33.541+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:33.541+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:34.542+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:34.542+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:34.542+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:35.445+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:35.445+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:35.445+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:36.295+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:36.295+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:36.295+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:37.148+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:37.148+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:37.148+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:38.152+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:38.152+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:38.152+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:39.006+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:39.007+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:39.007+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:39.955+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:39.955+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:39.955+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:40.956+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:40.956+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:40.956+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:41.809+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:41.809+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:41.809+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:42.810+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:42.810+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:42.810+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:43.858+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:43.858+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:43.858+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:44.811+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:44.811+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-04-17T18:14:44.811+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:45.859+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:45.861+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cancelled in-flight API_VERSIONS request with correlation id 1 due to node -1 being disconnected (elapsed time since creation: 43ms, elapsed time since send: 43ms, throttle time: 0ms, request timeout: 30000ms)
+2026-04-17T18:14:45.861+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:46.863+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:46.863+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cancelled in-flight API_VERSIONS request with correlation id 2 due to node -1 being disconnected (elapsed time since creation: 3ms, elapsed time since send: 3ms, throttle time: 0ms, request timeout: 30000ms)
+2026-04-17T18:14:46.863+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:47.864+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:47.864+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cancelled in-flight API_VERSIONS request with correlation id 3 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-04-17T18:14:47.864+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:48.729+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Node -1 disconnected.
+2026-04-17T18:14:48.729+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node -1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, throttle time: 0ms, request timeout: 30000ms)
+2026-04-17T18:14:48.729+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-04-17T18:14:50.002+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Error while fetching metadata with correlation id 6 : {logistics-events=UNKNOWN_TOPIC_OR_PARTITION}
+2026-04-17T18:14:50.003+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Cluster ID: OsNl5MkWTMuwueMgH3xVyA
+2026-04-17T18:14:50.186+02:00  WARN 23535 --- [shipment-service] [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Error while fetching metadata with correlation id 10 : {logistics-events=LEADER_NOT_AVAILABLE}
+2026-04-17T18:14:50.520+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2026-04-17T18:14:50.521+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] (Re-)joining group
+2026-04-17T18:14:50.533+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Request joining group due to: need to re-join with the given member-id: consumer-shipment-group-1-cfa110ae-5009-4ed1-9c7f-e98b1470ddee
+2026-04-17T18:14:50.533+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] (Re-)joining group
+2026-04-17T18:15:35.447+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Successfully joined group with generation Generation{generationId=2, memberId='consumer-shipment-group-1-cfa110ae-5009-4ed1-9c7f-e98b1470ddee', protocol='range'}
+2026-04-17T18:15:35.450+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Finished assignment for group at generation 2: {consumer-shipment-group-1-cfa110ae-5009-4ed1-9c7f-e98b1470ddee=Assignment(partitions=[logistics-events-0])}
+2026-04-17T18:15:35.463+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Successfully synced group in generation Generation{generationId=2, memberId='consumer-shipment-group-1-cfa110ae-5009-4ed1-9c7f-e98b1470ddee', protocol='range'}
+2026-04-17T18:15:35.463+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Notifying assignor about the new Assignment(partitions=[logistics-events-0])
+2026-04-17T18:15:35.465+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Adding newly assigned partitions: logistics-events-0
+2026-04-17T18:15:35.473+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Found no committed offset for partition logistics-events-0
+2026-04-17T18:15:35.481+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-shipment-group-1, groupId=shipment-group] Resetting offset for partition logistics-events-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2026-04-17T18:15:35.481+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : shipment-group: partitions assigned: [logistics-events-0]
+2026-04-17T18:15:35.568+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.e.s.service.ShipmentEventProcessor     : Created shipment id=1 for orderId=1, status=PREPARING
+2026-04-17T18:15:35.568+02:00  INFO 23535 --- [shipment-service] [ntainer#0-0-C-1] o.e.s.service.ShipmentEventProcessor     : Created shipment id=2 for orderId=2, status=PREPARING
+2026-04-17T18:18:28.099+02:00  INFO 23535 --- [shipment-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

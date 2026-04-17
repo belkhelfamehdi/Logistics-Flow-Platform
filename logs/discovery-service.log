@@ -1,0 +1,97 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< org.example:discovery-service >--------------------
+[INFO] Building discovery-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.0:run (default-cli) > test-compile @ discovery-service >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ discovery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-service ---
+[INFO] skip non existing resourceDirectory /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/discovery-service/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ discovery-service ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.0:run (default-cli) < test-compile @ discovery-service <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.0:run (default-cli) @ discovery-service ---
+[INFO] Attaching agents: []
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2026-04-17T18:13:22.259+02:00  INFO 22946 --- [  restartedMain] o.e.d.DiscoveryServiceApplication        : Starting DiscoveryServiceApplication using Java 17.0.18 with PID 22946 (/home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/discovery-service/target/classes started by mehdibelkhelfa in /home/mehdibelkhelfa/Dev/Projects/microservice/logistics-microservices-kafka/discovery-service)
+2026-04-17T18:13:22.260+02:00  INFO 22946 --- [  restartedMain] o.e.d.DiscoveryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-04-17T18:13:22.280+02:00  INFO 22946 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-17T18:13:22.281+02:00  INFO 22946 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-17T18:13:22.765+02:00  INFO 22946 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d30450df-d089-3ede-a1b2-4831e9a19254
+2026-04-17T18:13:22.921+02:00  INFO 22946 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-04-17T18:13:22.927+02:00  INFO 22946 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-17T18:13:22.927+02:00  INFO 22946 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2026-04-17T18:13:22.944+02:00  INFO 22946 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-17T18:13:22.945+02:00  INFO 22946 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-04-17T18:13:23.356+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-04-17T18:13:23.357+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-04-17T18:13:23.428+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-04-17T18:13:23.428+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-04-17T18:13:23.739+02:00  WARN 22946 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-04-17T18:13:23.762+02:00  WARN 22946 --- [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-17T18:13:23.769+02:00  INFO 22946 --- [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-17T18:13:23.780+02:00  INFO 22946 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-17T18:13:23.780+02:00  INFO 22946 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-04-17T18:13:23.781+02:00  INFO 22946 --- [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1776442403781 with initial instances count: 0
+2026-04-17T18:13:23.807+02:00  INFO 22946 --- [  restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-04-17T18:13:23.808+02:00  INFO 22946 --- [  restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2026-04-17T18:13:23.884+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-04-17T18:13:23.885+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-04-17T18:13:23.885+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-04-17T18:13:23.885+02:00  INFO 22946 --- [  restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-04-17T18:13:23.903+02:00  INFO 22946 --- [  restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2026-04-17T18:13:23.910+02:00  INFO 22946 --- [  restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-04-17T18:13:23.910+02:00  INFO 22946 --- [  restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-04-17T18:13:23.914+02:00  INFO 22946 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-17T18:13:23.939+02:00  INFO 22946 --- [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2026-04-17T18:13:23.946+02:00  INFO 22946 --- [      Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-04-17T18:13:23.946+02:00  INFO 22946 --- [      Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-04-17T18:13:23.946+02:00  INFO 22946 --- [      Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-04-17T18:13:23.946+02:00  INFO 22946 --- [      Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-04-17T18:13:23.946+02:00  INFO 22946 --- [      Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-04-17T18:13:23.947+02:00  INFO 22946 --- [      Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-04-17T18:13:23.948+02:00  INFO 22946 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2026-04-17T18:13:23.948+02:00  INFO 22946 --- [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-04-17T18:13:23.958+02:00  INFO 22946 --- [  restartedMain] o.e.d.DiscoveryServiceApplication        : Started DiscoveryServiceApplication in 1.875 seconds (process running for 2.134)
+2026-04-17T18:13:24.492+02:00  INFO 22946 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-17T18:13:24.492+02:00  INFO 22946 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-17T18:13:24.493+02:00  INFO 22946 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-17T18:13:28.434+02:00  INFO 22946 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ORDER-SERVICE/order-service:8081 with status UP (replication=false)
+2026-04-17T18:13:28.434+02:00  INFO 22946 --- [nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SHIPMENT-SERVICE/shipment-service:8083 with status UP (replication=false)
+2026-04-17T18:13:28.434+02:00  INFO 22946 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INVENTORY-SERVICE/inventory-service:8082 with status UP (replication=false)
+2026-04-17T18:13:29.034+02:00  INFO 22946 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SHIPMENT-SERVICE/shipment-service:8083 with status UP (replication=true)
+2026-04-17T18:13:29.035+02:00  INFO 22946 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance ORDER-SERVICE/order-service:8081 with status UP (replication=true)
+2026-04-17T18:13:29.035+02:00  INFO 22946 --- [nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance INVENTORY-SERVICE/inventory-service:8082 with status UP (replication=true)
+2026-04-17T18:13:32.376+02:00  INFO 22946 --- [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/api-gateway:8090 with status UP (replication=false)
+2026-04-17T18:13:32.887+02:00  INFO 22946 --- [nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/api-gateway:8090 with status UP (replication=true)
+2026-04-17T18:14:23.946+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:15:23.946+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:16:23.947+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:17:23.947+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:18:23.947+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-17T18:19:23.948+02:00  INFO 22946 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

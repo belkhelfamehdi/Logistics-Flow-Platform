@@ -6,19 +6,37 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:5173"
+              - "http://127.0.0.1:5173"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+            maxAge: 3600
       routes:
-        - id: account-service
-          uri: lb://account-service
+        - id: order-service
+          uri: lb://order-service
           predicates:
-            - Path=/accounts/**
-        - id: card-service
-          uri: lb://card-service
+            - Path=/orders/**
+        - id: inventory-service
+          uri: lb://inventory-service
           predicates:
-            - Path=/cards/**
-        - id: loans-service
-          uri: lb://loans-service
+            - Path=/inventory/**
+        - id: shipment-service
+          uri: lb://shipment-service
           predicates:
-            - Path=/loans/**
+            - Path=/shipments/**
 
 eureka:
   client:
