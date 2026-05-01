@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shipment-service
+  namespace: logistics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shipment-service
+  template:
+    metadata:
+      labels:
+        app: shipment-service
+    spec:
+      containers:
+        - name: shipment-service
+          image: shipment-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8083
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "default"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shipment-service
+  namespace: logistics
+spec:
+  ports:
+    - port: 8083
+      targetPort: 8083
+  selector:
+    app: shipment-service

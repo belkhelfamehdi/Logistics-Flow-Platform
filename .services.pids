@@ -1,7 +1,0 @@
-config-server:93783
-discovery-service:93805
-auth-service:94276
-order-service:94574
-inventory-service:94575
-shipment-service:94576
-api-gateway:95268

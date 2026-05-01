@@ -1,4 +1,4 @@
-package main.java.org.example.authservice.controller;
+package org.example.authservice.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
