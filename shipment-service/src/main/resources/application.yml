@@ -1,11 +1,31 @@
 server:
   port: 8083
 
+security:
+  jwt:
+    secret: ${AUTH_JWT_SECRET:please-change-me-this-is-a-256-bit-development-only-secret-key-xx}
+
 spring:
   application:
     name: shipment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/shipmentdb
+    username: logistics
+    password: logistics
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate.jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
   kafka:
     bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
       group-id: shipment-group
       auto-offset-reset: earliest

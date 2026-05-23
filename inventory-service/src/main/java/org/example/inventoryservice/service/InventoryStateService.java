@@ -1,70 +1,84 @@
 package org.example.inventoryservice.service;
 
 import org.example.inventoryservice.model.InventoryReservation;
+import org.example.inventoryservice.model.InventoryReservationEntity;
+import org.example.inventoryservice.model.StockEntity;
+import org.example.inventoryservice.repository.InventoryReservationRepository;
+import org.example.inventoryservice.repository.StockRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.Instant;
-import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.TreeMap;
 
 @Service
 public class InventoryStateService {
 
-    private final AtomicLong reservationIdSequence = new AtomicLong(0L);
-    private final ConcurrentMap<String, Integer> stockBySku = new ConcurrentHashMap<>();
-    private final ConcurrentMap<Long, InventoryReservation> reservations = new ConcurrentHashMap<>();
+    private final StockRepository stockRepository;
+    private final InventoryReservationRepository reservationRepository;
 
-    public InventoryStateService() {
-        stockBySku.put("SKU-001", 40);
-        stockBySku.put("SKU-002", 20);
-        stockBySku.put("SKU-003", 60);
+    public InventoryStateService(StockRepository stockRepository, InventoryReservationRepository reservationRepository) {
+        this.stockRepository = stockRepository;
+        this.reservationRepository = reservationRepository;
     }
 
-    public synchronized InventoryReservation processOrderCreated(Long orderId, String sku, int quantity) {
-        int available = stockBySku.getOrDefault(sku, 0);
-        boolean accepted = available >= quantity;
+    @Transactional
+    public InventoryReservation processOrderCreated(Long orderId, String sku, int quantity) {
+        return reservationRepository.findByOrderId(orderId)
+                .map(InventoryReservationEntity::toRecord)
+                .orElseGet(() -> persistReservation(orderId, sku, quantity));
+    }
+
+    private InventoryReservation persistReservation(Long orderId, String sku, int quantity) {
+        StockEntity stock = stockRepository.findById(sku).orElse(null);
+        int available = stock != null ? stock.getAvailable() : 0;
+        boolean accepted = stock != null && available >= quantity;
 
         if (accepted) {
-            stockBySku.put(sku, available - quantity);
+            stock.setAvailable(available - quantity);
+            stockRepository.save(stock);
         }
 
-        String status = accepted ? "RESERVED" : "REJECTED_NO_STOCK";
-        long reservationId = reservationIdSequence.incrementAndGet();
-        InventoryReservation reservation = new InventoryReservation(
-                reservationId,
+        InventoryReservationEntity entity = new InventoryReservationEntity(
                 orderId,
                 sku,
                 quantity,
-                status,
+                accepted ? "RESERVED" : "REJECTED_NO_STOCK",
                 Instant.now()
         );
-        reservations.put(reservationId, reservation);
-        return reservation;
+        return reservationRepository.save(entity).toRecord();
     }
 
-    public synchronized int restock(String sku, int quantity) {
-        int current = stockBySku.getOrDefault(sku, 0);
-        int updated = current + quantity;
-        stockBySku.put(sku, updated);
-        return updated;
+    @Transactional
+    public int restock(String sku, int quantity) {
+        StockEntity stock = stockRepository.findById(sku)
+                .orElseGet(() -> new StockEntity(sku, 0));
+        stock.setAvailable(stock.getAvailable() + quantity);
+        return stockRepository.save(stock).getAvailable();
     }
 
+    @Transactional(readOnly = true)
     public Map<String, Integer> snapshotStock() {
-        return new LinkedHashMap<>(new java.util.TreeMap<>(stockBySku));
+        Map<String, Integer> sorted = new TreeMap<>();
+        for (StockEntity entity : stockRepository.findAll()) {
+            sorted.put(entity.getSku(), entity.getAvailable());
+        }
+        return new LinkedHashMap<>(sorted);
     }
 
+    @Transactional(readOnly = true)
     public Integer stockForSku(String sku) {
-        return stockBySku.getOrDefault(sku, 0);
+        return stockRepository.findById(sku).map(StockEntity::getAvailable).orElse(0);
     }
 
+    @Transactional(readOnly = true)
     public List<InventoryReservation> allReservations() {
-        return reservations.values().stream()
-                .sorted(Comparator.comparingLong(InventoryReservation::id))
+        return reservationRepository.findAll(Sort.by("id")).stream()
+                .map(InventoryReservationEntity::toRecord)
                 .toList();
     }
 }

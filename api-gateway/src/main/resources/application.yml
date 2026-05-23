@@ -1,6 +1,10 @@
 server:
   port: 8090
 
+security:
+  jwt:
+    secret: ${AUTH_JWT_SECRET:please-change-me-this-is-a-256-bit-development-only-secret-key-xx}
+
 spring:
   application:
     name: api-gateway

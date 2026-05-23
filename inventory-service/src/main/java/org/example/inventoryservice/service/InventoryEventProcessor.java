@@ -1,8 +1,9 @@
 package org.example.inventoryservice.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.inventoryservice.event.InventoryReservedEvent;
+import org.example.inventoryservice.event.OrderCreatedEvent;
 import org.example.inventoryservice.model.InventoryReservation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,14 +11,12 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 @Service
 public class InventoryEventProcessor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InventoryEventProcessor.class);
-    private static final String LOGISTICS_TOPIC = "logistics-events";
+    public static final String ORDER_TOPIC = "order-events";
+    public static final String INVENTORY_TOPIC = "inventory-events";
 
     private final InventoryStateService inventoryStateService;
     private final KafkaTemplate<String, String> kafkaTemplate;
@@ -33,55 +32,32 @@ public class InventoryEventProcessor {
         this.objectMapper = objectMapper;
     }
 
-    @KafkaListener(topics = LOGISTICS_TOPIC, groupId = "inventory-group")
-    public void consume(String message) {
-        try {
-            Map<String, Object> payload = objectMapper.readValue(message, new TypeReference<>() {
-            });
-            String event = String.valueOf(payload.get("event"));
+    @KafkaListener(topics = ORDER_TOPIC, groupId = "inventory-group")
+    public void onOrderCreated(String message) throws JsonProcessingException {
+        OrderCreatedEvent event = objectMapper.readValue(message, OrderCreatedEvent.class);
+        String sku = event.sku() == null ? "" : event.sku().trim().toUpperCase();
 
-            if (!"ORDER_CREATED".equals(event)) {
-                return;
-            }
-
-            Long orderId = toLong(payload.get("orderId"));
-            String sku = String.valueOf(payload.get("sku")).trim().toUpperCase();
-            int quantity = toInt(payload.get("quantity"));
-
-            InventoryReservation reservation = inventoryStateService.processOrderCreated(orderId, sku, quantity);
-            publishInventoryReserved(reservation);
-            LOGGER.info("Processed ORDER_CREATED for orderId={}, status={}", orderId, reservation.status());
-        } catch (Exception exception) {
-            LOGGER.error("Failed to process logistics event: {}", message, exception);
-        }
+        InventoryReservation reservation = inventoryStateService.processOrderCreated(
+                event.orderId(),
+                sku,
+                event.quantity()
+        );
+        publishInventoryReserved(reservation);
+        LOGGER.info("Processed OrderCreatedEvent for orderId={}, status={}", event.orderId(), reservation.status());
     }
 
     private void publishInventoryReserved(InventoryReservation reservation) throws JsonProcessingException {
-        Map<String, Object> payload = new LinkedHashMap<>();
-        payload.put("event", "INVENTORY_RESERVED");
-        payload.put("orderId", reservation.orderId());
-        payload.put("reservationId", reservation.id());
-        payload.put("sku", reservation.sku());
-        payload.put("quantity", reservation.quantity());
-        payload.put("status", reservation.status());
-        payload.put("accepted", "RESERVED".equals(reservation.status()));
-        payload.put("timestamp", reservation.createdAt().toString());
+        InventoryReservedEvent event = new InventoryReservedEvent(
+                reservation.orderId(),
+                reservation.id(),
+                reservation.sku(),
+                reservation.quantity(),
+                reservation.status(),
+                "RESERVED".equals(reservation.status()),
+                reservation.createdAt()
+        );
 
-        String message = objectMapper.writeValueAsString(payload);
-        kafkaTemplate.send(LOGISTICS_TOPIC, String.valueOf(reservation.orderId()), message);
-    }
-
-    private static Long toLong(Object value) {
-        if (value instanceof Number number) {
-            return number.longValue();
-        }
-        return Long.parseLong(String.valueOf(value));
-    }
-
-    private static int toInt(Object value) {
-        if (value instanceof Number number) {
-            return number.intValue();
-        }
-        return Integer.parseInt(String.valueOf(value));
+        String message = objectMapper.writeValueAsString(event);
+        kafkaTemplate.send(INVENTORY_TOPIC, String.valueOf(reservation.orderId()), message);
     }
 }

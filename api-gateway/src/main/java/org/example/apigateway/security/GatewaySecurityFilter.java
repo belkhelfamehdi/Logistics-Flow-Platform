@@ -1,4 +1,4 @@
-package main.java.org.example.apigateway.security;
+package org.example.apigateway.security;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -22,9 +22,11 @@ import java.util.Set;
 public class GatewaySecurityFilter implements GlobalFilter, Ordered {
 
     private final WebClient webClient;
+    private final GatewayJwtIssuer jwtIssuer;
 
-    public GatewaySecurityFilter(WebClient.Builder webClientBuilder) {
+    public GatewaySecurityFilter(WebClient.Builder webClientBuilder, GatewayJwtIssuer jwtIssuer) {
         this.webClient = webClientBuilder.build();
+        this.jwtIssuer = jwtIssuer;
     }
 
     @Override
@@ -67,9 +69,13 @@ public class GatewaySecurityFilter implements GlobalFilter, Ordered {
                         return forbidden(exchange, "Role is not allowed for this action");
                     }
 
+                    String token = jwtIssuer.issue(profile.username(), List.copyOf(roles));
                     ServerHttpRequest mutatedRequest = request.mutate()
-                            .header("X-Authenticated-User", profile.username())
-                            .header("X-Authenticated-Roles", String.join(",", roles))
+                            .headers(headers -> {
+                                headers.remove("X-Authenticated-User");
+                                headers.remove("X-Authenticated-Roles");
+                                headers.set(HttpHeaders.AUTHORIZATION, "Bearer " + token);
+                            })
                             .build();
 
                     return chain.filter(exchange.mutate().request(mutatedRequest).build());

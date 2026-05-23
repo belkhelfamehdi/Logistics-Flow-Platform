@@ -34,12 +34,13 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/auth/csrf", "/auth/login", "/auth/logout").permitAll()
                         .requestMatchers("/actuator/health").permitAll()
+                        .requestMatchers("/auth/me").authenticated()
                         .requestMatchers("/platform/admin/**").hasRole("ADMIN")
                         .requestMatchers("/platform/ops/**").hasAnyRole("OPS", "ADMIN")
                         .requestMatchers("/platform/delivery/**").hasAnyRole("DELIVERY", "ADMIN")
-                        .anyRequest().permitAll())
+                        .anyRequest().authenticated())
                 .formLogin(form -> form.disable())
                 .httpBasic(basic -> basic.disable());
 

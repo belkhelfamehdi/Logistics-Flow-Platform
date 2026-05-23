@@ -1,8 +1,10 @@
 package org.example.shipmentservice.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.example.shipmentservice.model.ShipmentRecord;
 import org.example.shipmentservice.model.ShipmentStatusUpdateRequest;
+import org.example.shipmentservice.security.JwtAuthFilter;
 import org.example.shipmentservice.service.ShipmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,15 +12,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/shipments")
@@ -46,9 +45,9 @@ public class ShipmentController {
     public ResponseEntity<?> updateShipmentStatus(
             @PathVariable Long id,
             @Valid @RequestBody ShipmentStatusUpdateRequest request,
-            @RequestHeader(value = "X-Authenticated-Roles", required = false) String rolesHeader
+            HttpServletRequest httpRequest
     ) {
-        Set<String> roles = parseRoles(rolesHeader);
+        Set<String> roles = currentRoles(httpRequest);
         String targetStatus = request.status().trim().toUpperCase();
 
         if (!isAllowedForStatusUpdate(roles, targetStatus)) {
@@ -65,16 +64,13 @@ public class ShipmentController {
         }
     }
 
-    private static Set<String> parseRoles(String rolesHeader) {
-        if (rolesHeader == null || rolesHeader.isBlank()) {
-            return Set.of();
+    @SuppressWarnings("unchecked")
+    private static Set<String> currentRoles(HttpServletRequest request) {
+        Object attribute = request.getAttribute(JwtAuthFilter.ATTR_ROLES);
+        if (attribute instanceof Set<?> set) {
+            return (Set<String>) set;
         }
-
-        return Arrays.stream(rolesHeader.split(","))
-                .map(String::trim)
-                .map(String::toUpperCase)
-                .filter(value -> !value.isBlank())
-                .collect(Collectors.toSet());
+        return Set.of();
     }
 
     private static boolean isAllowedForStatusUpdate(Set<String> roles, String status) {
