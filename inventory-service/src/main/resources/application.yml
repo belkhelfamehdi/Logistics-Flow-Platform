@@ -33,9 +33,6 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     listener:
       missing-topics-fatal: false
-      observation-enabled: true
-    template:
-      observation-enabled: true
 
 eureka:
   client:
@@ -46,22 +43,3 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: inventory-service:${server.port}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics,prometheus
-  endpoint:
-    health:
-      probes:
-        enabled: true
-      show-details: when_authorized
-  health:
-    livenessstate:
-      enabled: true
-    readinessstate:
-      enabled: true
-  tracing:
-    sampling:
-      probability: 1.0
